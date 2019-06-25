@@ -1,0 +1,19 @@
+language: java
+
+jdk:
+  - oraclejdk8
+
+
+# Stops Travis CI from making a virtual machine for each build.
+sudo: false
+
+# Skips install "gradle assemble"
+install: true
+
+# Sets up gradle wrapper
+before_install:
+  - chmod +x gradlew
+  - chmod +x gradle/wrapper/gradle-wrapper.jar
+
+# Test
+script: "./gradlew test build --info"
