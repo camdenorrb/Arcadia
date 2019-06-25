@@ -9,11 +9,15 @@ group = "me.camdenorrb"
 version = "1.0.0"
 
 repositories {
+    jcenter()
     mavenCentral()
 }
 
 dependencies {
+
     implementation(kotlin("stdlib-jdk8"))
+    implementation("net.dv8tion:JDA:3.8.3_463")
+
     testCompile("junit", "junit", "4.12")
 }
 
